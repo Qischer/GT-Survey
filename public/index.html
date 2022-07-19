@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        const res = document.getElementsByName("qlist");
+
+        function myFunction() {
+            const qnum = $('.question').length;
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            let selected = [];
+            let element = "q";
+            console.log(qnum);
+
+            for (var i = 1; i <= qnum ; i++) {
+                const question = document.getElementsByName(element + i);
+                for (var response of question) {
+                    if (response.checked) {
+                        selected.push({num : i, response : response.value})
+                    }
+                }
+            }
+
+            const data = { first_name: fname, last_name: lname, answer_key: selected };
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            };
+
+            fetch('/api',options);
+
+            console.log(data);
+            window.location.href = "/thankyou.html";
+        }
+
+    </script>
+    <div class="logo">
+        <img src="images/grant-thornton.svg" alt="Grant Thornton Logo">
+    </div>
+    <!-- <div class = "headline">
+        <p>INTRO: Grant Thornton Vietnam proundly launches Technology Solutions Consulting practice and we partner with global leading ERP (Enterprise Resource Planning) service providers like Oracle NetSuite, SAP, Microsoft,... to provide ERP-focused services and implementation to clients. With this new service line, we envision strengthening our consulting practice through enriching our valued clients' choices of a complete digital and technology solutions for Digital Transformation journey ahead.</p><br>
+    </div> -->
+
+    <div class = "qlist">
+        <div class = "question" id = "q1">
+            <p>What industry do your company belong to? / Doanh nghiệp bạn thuộc lĩnh vực nào?</p>
+            <div class = "multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Professional service / Dịch vụ chuyên nghiệp</span>
+                        <input type="radio" id="q1" name="q1" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Wholesales & Distribution / Bản sỉ và phân phối</span>
+                        <input type="radio" id="q1" name="q1" value="c">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Real Estate / Bất động sản</span>
+                        <input type="radio" id="q1" name="q1" value="d">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Others / Ý kiến khác</span>
+                        <input type="radio" id="q1" name="q1" value="e">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q2">
+            <p>How many managing systems are there in your company? / Công ty bạn hiện đang sử dụng bao nhiêu hệ thống quản lý?</p>
+            <div class ="multi-choice">
+                <label class="custom-radio-btn">
+                    <span class="label">Zero</span>
+                    <input type="radio" id="q2" name="q2" value="a">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="custom-radio-btn">
+                    <span class="label">One</span>
+                    <input type="radio" id="q2" name="q2" value="b">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div class = "question" id = "q3">
+            <p>What is the current system your company use for tracking and managing your business? / 
+                Phần mềm công ty bạn hiện tại đang sử dụng cho việc theo dõi và quản lý doanh nghiệp? 
+                (Có thể chọn hơn 1 đáp án)</p>
+
+                <div class = "multi-choice">
+                    <label class="custom-radio-btn">
+                        <span class="label">Misa</span>
+                        <input type="checkbox" id="q3" name="q3" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="custom-radio-btn">
+                        <span class="label">Fast</span>
+                        <input type="checkbox" id="q3" name="q3" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="custom-radio-btn">
+                        <span class="label">Microsoft Dynamic</span>
+                        <input type="checkbox" id="q3" name="q3" value="c">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="custom-radio-btn">
+                        <span class="label">SAP</span>
+                        <input type="checkbox" id="q3" name="q3" value="d">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="custom-radio-btn">
+                        <span class="label">Odoo</span>
+                        <input type="checkbox" id="q3" name="q3" value="e">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="custom-radio-btn">
+                        <span class="label">Oracle </span>
+                        <input type="checkbox" id="q3" name="q3" value="f">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="custom-radio-btn">
+                        <span class="label">Others / Ý kiến khác</span>
+                        <input type="checkbox" id="q3" name="q3" value="g">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+        </div>
+    </div>
+    <div>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+    <button onclick = "myFunction()">Submit</button>
+</body>
+</html>

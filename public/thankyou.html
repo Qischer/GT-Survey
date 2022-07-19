@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Thank you for completing the survey! </h1>
+    <script>
+        const key = {
+            'a': 'downloadable/1. Apparel, footwear and accessories_KPI_Assessment.pdf',
+            'b': 'downloadable/2. Manufacturing_KPI_Assessment.pdf',
+            'c': 'downloadable/3. Professional Services_KPI_Assessment.pdf',
+            'd': 'downloadable/4. Retail_KPI_Assessment.pdf',
+            'e': 'downloadable/5. Wholesale Distribution_KPI_Assessment.pdf',
+            'f': 'downloadable/6. Food and Beverage_KPI_Assessment.pdf',
+            'g': 'public/downloadable/7. Technology_Services_KPI_Assessment.pdf'
+        }
+
+        getData();
+        async function getData() {
+            let response  = await fetch('/rd');
+            let data = await response.json();
+            console.log(data);
+
+            console.log(data.answer_key);
+            const dlink = key[data.answer_key[0].response];
+            console.log(dlink);
+
+            document.getElementById('redirect').href = dlink;
+        }
+    </script>
+    <a id="redirect" href="#" download> Download pdf </a>
+</body>
+</html>
