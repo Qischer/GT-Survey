@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <title>Document</title>
+    <title>Grant Thornton Survey</title>
 </head>
 <body>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -90,67 +90,290 @@
         <div class = "question" id = "q2">
             <p>How many managing systems are there in your company? / Công ty bạn hiện đang sử dụng bao nhiêu hệ thống quản lý?</p>
             <div class ="multi-choice">
-                <label class="custom-radio-btn">
-                    <span class="label">Zero</span>
-                    <input type="radio" id="q2" name="q2" value="a">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="custom-radio-btn">
-                    <span class="label">One</span>
-                    <input type="radio" id="q2" name="q2" value="b">
-                    <span class="checkmark"></span>
-                </label>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">0</span>
+                        <input type="radio" id="q2" name="q2" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">1</span>
+                        <input type="radio" id="q2" name="q2" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
             </div>
         </div>
         <div class = "question" id = "q3">
             <p>What is the current system your company use for tracking and managing your business? / 
                 Phần mềm công ty bạn hiện tại đang sử dụng cho việc theo dõi và quản lý doanh nghiệp? 
                 (Có thể chọn hơn 1 đáp án)</p>
-
                 <div class = "multi-choice">
+                    <div class = "btn_wrapper">
+                        <label class="custom-radio-btn">
+                            <span class="label">Misa</span>
+                            <input type="checkbox" id="q3" name="q3" value="a">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class = "btn_wrapper">
+                        <label class="custom-radio-btn">
+                            <span class="label">Fast</span>
+                            <input type="checkbox" id="q3" name="q3" value="b">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class = "btn_wrapper">
+                        <label class="custom-radio-btn">
+                            <span class="label">Microsoft Dynamic</span>
+                            <input type="checkbox" id="q3" name="q3" value="c">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class = "btn_wrapper">
+                        <label class="custom-radio-btn">
+                            <span class="label">SAP</span>
+                            <input type="checkbox" id="q3" name="q3" value="d">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class = "btn_wrapper">
+                        <label class="custom-radio-btn">
+                            <span class="label">Odoo</span>
+                            <input type="checkbox" id="q3" name="q3" value="e">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class = "btn_wrapper">
+                        <label class="custom-radio-btn">
+                            <span class="label">Oracle </span>
+                            <input type="checkbox" id="q3" name="q3" value="f">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class = "btn_wrapper">
+                        <label class="custom-radio-btn">
+                            <span class="label">Others / Ý kiến khác</span>
+                            <input type="checkbox" id="q3" name="q3" value="g">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+        </div>
+        <div class = "question" id = "q4">
+            <p>How many employees does your company have? / Công ty bạn hiện tại có bao nhiêu nhân viên?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
                     <label class="custom-radio-btn">
-                        <span class="label">Misa</span>
-                        <input type="checkbox" id="q3" name="q3" value="a">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="custom-radio-btn">
-                        <span class="label">Fast</span>
-                        <input type="checkbox" id="q3" name="q3" value="b">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="custom-radio-btn">
-                        <span class="label">Microsoft Dynamic</span>
-                        <input type="checkbox" id="q3" name="q3" value="c">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="custom-radio-btn">
-                        <span class="label">SAP</span>
-                        <input type="checkbox" id="q3" name="q3" value="d">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="custom-radio-btn">
-                        <span class="label">Odoo</span>
-                        <input type="checkbox" id="q3" name="q3" value="e">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="custom-radio-btn">
-                        <span class="label">Oracle </span>
-                        <input type="checkbox" id="q3" name="q3" value="f">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="custom-radio-btn">
-                        <span class="label">Others / Ý kiến khác</span>
-                        <input type="checkbox" id="q3" name="q3" value="g">
+                        <span class="label">Less than 100 employees / Ít hơn 100 nhân viên</span>
+                        <input type="radio" id="q4" name="q4" value="a">
                         <span class="checkmark"></span>
                     </label>
                 </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Less than 500 employees / Ít hơn 500 nhân viên</span>
+                        <input type="radio" id="q4" name="q4" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Less than 1,000 employees / Ít hơn 1,000 nhân viên</span>
+                        <input type="radio" id="q4" name="q4" value="c">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">More than  1,000 employees / Nhiều hơn 1,000 nhân viên</span>
+                        <input type="radio" id="q4" name="q4" value="d">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q5">
+            <p>If your company still applies WFH policies partially for your employees, how do you keep track of work progress, productivity and the flow of information? / Nếu doanh nghiệp bạn vẫn đang áp dụng chính sách WFH 1 phần, làm thế nào để bạn có thể theo dõi tiến độ công việc, năng suất và luồng thông tin?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">We are using email and other communication tools to report work / Chúng tôi sử dụng emil và những công cụ giao tiếp khác để báo cáo công việc</span>
+                        <input type="radio" id="q5" name="q5" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">We do have an office management system to manageme the work (1Office, Microsoft office, ) /Chúng tôi có một hệ thống quản lý văn phòng để quản lý công việc (1Office, Microsoft office,...)</span>
+                        <input type="radio" id="q5" name="q5" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">We do have an ERP system in place to manage remotely / Chúng tôi có phần mềm ERP để quản lý từ xa</span>
+                        <input type="radio" id="q5" name="q5" value="c">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q6">
+            <p>What is the biggest challenge in your business operation? / Khó khăn và thách thức lớn nhất doanh nghiệp bạn đang đối mặt là gì?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Too much redandunt paperwork across processes / Quá nhiều giấy tờ cần lưu trữ giữa các quy trình</span>
+                        <input type="radio" id="q6" name="q6" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Long time to generate reports to submit BOD and the data from different sources are not consistent/ Mất nhiều thời gian để tạo ra được báo cáo cho HĐQT và số liệu từ nhiều nguồn không đồng nhất</span>
+                        <input type="radio" id="q6" name="q6" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Planning and budgeting jobs take great efforts and resources but efficiency does not correspond / Tốn nhiều công sức nguồn lực cho việc hoạch định kế hoạch và lên ngân sách nhưng không hiệu quả không tương ứng</span>
+                        <input type="radio" id="q6" name="q6" value="c">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q7">
+            <p>In the 2nd half of year 2022 and year 2023, what are the areas your company want to take for significant improvement? / Trong nửa năm 2022 và 2023, doanh nghiệp bạn mong muốn tập trung cải thiện điều gì?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Increasing producivity and collaboration among departments with minimal human errors / Tăng năng suất làm việc và sự hợp tác giữa các phòng ban với sai sót tối thiểu do con người</span>
+                        <input type="radio" id="q7" name="q7" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Facilitating WFH and reducing dependency in office space / Tạo điều kiện thuận lợi cho WFH và giảm sự phụ thuộc vào không gian văn phòng</span>
+                        <input type="radio" id="q7" name="q7" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Making internal reports more meaningful and powerful by visualizing data / Xuất báo cáo nội bộ có giá trị hơn về số liệu và rõ ràng hơn bằng trực quan hóa</span>
+                        <input type="radio" id="q7" name="q7" value="c">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q8">
+            <p>If there are discrepancies between output and input data or departmental reports and BOD reports, how does your company reconcile? / Khi có sự khác biệt giữa dữ liệu đầu ra và đầu vào hoặc báo cáo của phòng ban và báo cáo của HĐQT, thì công ty của bạn sẽ điều chỉnh như thế nào?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">We revise the reports then setting calls / sending emails to align the new reports version with other departments / Chúng tôi điều chỉnh bằng cách thiết lập những cuộc gọi hoặc emails để kiểm chứng thông tin số liệu</span>
+                        <input type="radio" id="q8" name="q8" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">We have a system where all departments share 1 source of data so no discrepancies / Chúng tôi có hệ thống mà hệ thống mà tất cả các bộ phận sử dụng 1 nguồn dữ liệu nên không có sự khác biệt số liệu</span>
+                        <input type="radio" id="q8" name="q8" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q9">
+            <p>Does your company prepare a budget for implementing or enhancing digital technology in 2023? / Năm 2023, công ty của bạn có chuẩn bị ngân sách để triển khai hoặc nâng cao công nghệ kỹ thuật số không?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Of course, we have / Tất nhiên chúng tôi có</span>
+                        <input type="radio" id="q9" name="q9" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Still under discussion, not finalized yet / Hiện tại vẫn trong quá trình thảo luận</span>
+                        <input type="radio" id="q9" name="q9" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Tight budget for digital technology in 2023 / Ngân sách kinh phí hạn chế cho việc chuyển đổi số năm 2023</span>
+                        <input type="radio" id="q9" name="q9" value="c">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">No, we do not have a budget for digital technology in 2023 / Không, hiện tại chúng tôi không có ngân sách đầu tư cho chuyển đổi số năm 2023</span>
+                        <input type="radio" id="q9" name="q9" value="d">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q10">
+            <p>Do you think an ERP system will improve the cooperation among department smoothly and boost management efficiency? / Hệ thống ERP sẽ cải thiện  sự hợp tác giữa các phòng ban nhịp nhàng hơn và nâng cao hiệu quả quản lý?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Yes / Tôi nghĩ phần mềm sẽ giúp ích cho doanh nghiệp</span>
+                        <input type="radio" id="q10" name="q10" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">No / Không, tôi không nghĩ nó hữu ích</span>
+                        <input type="radio" id="q10" name="q10" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class = "question" id = "q11">
+            <p>Would you like to have follow-up appointment ? / Bạn có muốn có một cuộc hẹn tiếp theo cho thảo luận?</p>
+            <div class ="multi-choice">
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">Yes, definately / Đương nhiên </span>
+                        <input type="radio" id="q11" name="q11" value="a">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class = "btn_wrapper">
+                    <label class="custom-radio-btn">
+                        <span class="label">No / Không</span>
+                        <input type="radio" id="q11" name="q11" value="b">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
-    <div>
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname"><br><br>
-    <button onclick = "myFunction()">Submit</button>
+    <div class ="submit">
+        <div class="text_wrapper">
+            <label for="fname">Họ và Tên:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Đơn vị Công Tác:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+        </div>
+        <div class="btn">
+            <button onclick = "myFunction()">Submit</button>
+        </div>
+    </div>
 </body>
 </html>

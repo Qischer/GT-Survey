@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "firebase": "^9.9.0",
     "jquery": "^3.6.0",
-    "nedb": "^1.8.0"
+    "nedb": "^1.8.0",
+    "react-survey": "^1.0.0"
   }
 }

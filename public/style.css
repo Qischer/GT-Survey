@@ -7,7 +7,6 @@ body {
 }
 
 .logo {
-  scale: 10%;
   padding: 20px 30px;
 }
 
@@ -42,16 +41,51 @@ body {
     justify-content: center;
     align-items: left;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
+}
+
+#q8 .btn_wrapper {
+  margin-bottom: 30pt;
+}
+
+.btn_wrapper {
+  padding: 10px;
+}
 
   .question p {
-    padding: 20px 10px;
+    padding: 30px 20px 0px 20px;
     font-weight: bold;
   }
 
   .question .label {
     font-size: 11pt;
     color: #333;
+  }
+
+  .submit {
+    width: 80%;
+    height: auto;
+    display:block;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .submit .text_wrapper {
+    margin: 20px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+
+  }
+
+  .submit .btn {
+    display:block;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    justify-content: center;
+    align-items: left;
   }
 
   .multi-choice {
@@ -63,6 +97,8 @@ body {
 *, *::after, *::before {
     box-sizing: border-box;
   }
+
+
 
   .custom-radio-btn {
     --size: 25px;
@@ -116,34 +152,36 @@ body {
     display: inline-block;
     transition: opacity 0.5s ease;
     /* changes from the video  */
-    
+
     border: var(--border) solid #444;
     padding: var(--gap);
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 60%;
   }
 
   .custom-radio-btn:hover .checkmark{
-    opacity: 60%;
+    opacity: 100%;
   }
-  
+
   .custom-radio-btn.left .checkmark {
     left: auto;
     right: 0;
   }
-  
+
   .custom-radio-btn input:checked + .checkmark {
     /* changes from the video  */
-  
+
     /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
     background-origin: content-box;
     background-repeat: no-repeat;
+    opacity: 100%;
     background-image: radial-gradient(
-      circle at center, 
-      var(--check-color) 
+      circle at center,
+      var(--check-color)
        /* the size of the check mark is determined by subtracting from the size of the circle
        the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
-         calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2), 
+         calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2),
       rgba(255, 255, 255, 0) 0);
   }
