@@ -103,7 +103,7 @@ body {
   .custom-radio-btn {
     --size: 25px;
     min-width: var(--size);
-    height: var(--size);
+    height: auto;
     border-radius: 50%;
     display:block;
     justify-content: center;
